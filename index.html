@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+    content="Voice-Language Foundation Models for Real-Time Conversation and Autonomous Interaction">
+  <meta name="keywords" content="Voila"><!--TO BE UPDATED-->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Voila</title><!--TO BE UPDATED-->
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.ico">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+
+<body>
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <img class="logo-image" src="static/images/logo.png" />
+            <h1 class="title is-1 publication-title">Voice-Language Foundation Models for Real-Time Autonomous Interaction and Speech Roleplay</h1>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">
+                Yemin Shi<sup>*</sup>,</span>
+              <span class="author-block">
+                Yu Shu<sup>*</sup>,</span>
+              <span class="author-block">
+                Siwei Dong<sup>*</sup>,
+              </span>
+              <span class="author-block">
+                Guangyi Liu<sup>*</sup>,
+              </span>
+              <span class="author-block">
+                Jaward Sesay<sup></sup>,
+              </span>
+              <span class="author-block">
+                Jingwen Li<sup></sup>,
+              </span>
+              <span class="author-block">
+                Zhiting Hu<sup>*</sup>
+              </span>
+            </div>
+
+            <div class="is-size-5 publication-authors">
+              <span class="author-block"><sup></sup>Maitrix.org, UC San Diego, MBZUAI</span>
+              <p><a href="https://voila.maitrix.org">https://voila.maitrix.org</a> &nbsp;&nbsp;&nbsp;&nbsp;<span class="author-block"><sup>*</sup>Equal Contribution</span></p>
+            </div>
+
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <!-- PDF Link. -->
+                <span class="link-block">
+                  <a href="https://arxiv.org/pdf/2011.12948" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                    </span>
+                    <span>Paper</span>
+                  </a>
+                </span>
+                
+                <!-- Code Link. -->
+                <span class="link-block">
+                  <a href="https://github.com/maitrix-org/Voila" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span>
+                <!-- Dataset Link. -->
+                <span class="link-block">
+                  <a href="https://huggingface.co/maitrix-org/Voila-chat"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fas fa-atom"></i>
+                    </span>
+                    <span>Model</span>
+                  </a>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <!-- Abstract. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              The evolution of voice AI systems has confronted numerous challenges, with traditional pipeline architectures embodying notable constraints such as high latency, the erosion of vocal nuances, and mechanical, reactive interactions. While these structures sufficiently accommodate basic voice-driven interfaces, the objective of achieving truly autonomous interactions akin to natural human communication has remained largely unmet. Voila, a pioneering family of large audio-language foundation models, is introduced to transcend these limitations. By leveraging an innovative end-to-end model design, Voila targets the dual objectives of facilitating real-time, autonomous, and flexible voice interactions while preserving rich vocal details. Voila's novel hierarchical Transformer architecture integrates streaming audio encoding with multitier audio generators, achieving a high-fidelity audio processing experience that minimizes latency to 195 ms—surpassing the average human response time. Additionally, Voila intelligently melds the voice and language modeling capabilities inherent in LLMs, empowering users with customizable voice and persona-driven interactions. This framework not only retains linguistic proficiency and vast knowledge but also incorporates millions of pre-built and customizable voices to enhance user engagement.
+            </p>
+            <p>Moreover, Voila is established as a unified model adept in various audio tasks beyond spoken dialogue, including Automatic Speech Recognition (ASR), Text-to-Speech (TTS), and adaptations such as speech translation. Capable of supporting six languages and enriched by extensive multilingual training data, Voila embodies a significant step forward in transforming machine interactions from passive exchanges into seamless, proactive dialogues. The deployment of Voila's web demo promises broad user accessibility and invites further exploration into redefining the dynamics of human-AI communication.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!--/ Abstract. -->
+
+      <!-- Paper video. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <!-- <h2 class="title is-3">Video Demo</h2> -->
+          <div class="publication-video">
+            <video id="teaser" controls playsinline height="100%">
+              <source src="./static/videos/voila-demo.mp4" type="video/mp4">
+            </video>
+            <h2 class="subtitle has-text-centered">
+              <span class="dnerf">Voila Conceptual Demo</span>
+            </h2>
+          </div>
+        </div>
+      </div>
+      <!--/ Paper video. -->
+    </div>
+  </section>
+
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <!-- Highlights -->
+        <div class="column">
+          <div class="content">
+            <h2 class="title is-3">1. Highlights</h2>
+            <hr />
+            <p>
+              Voila designs a hierarchical Transformer architecture, including streaming audio encoding and tokenization, and multi-scale Transformers consisting of an LLM backbone and a hierarchical audio generator. The models are trained in an end-to-end way with extensive audio-text data. The key advancements are:
+            </p>
+            <div id="highlights-image" class="has-text-centered">
+              <img src="static/images/highlights.png" alt="Voila Highlights" width="80%" />
+            </div>
+            <p>We release the model in <a href="https://huggingface.co/maitrix-org/Voila-chat">Hugging face</a> and encourage the readers to try our <a href="https://huggingface.co/spaces/maitrix-org/Voila-demo">web demo</a>.</p>
+          </div>
+        </div>
+        <!--/ Highlights -->
+      </div>
+    </div>
+  </section>
+        
+  <section class="section" id="demos">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column">
+          <h2 class="title is-3">2. Demos</h2>
+          <div class="content has-text-centered">
+            <p class="subtitle">Experience Voila's capabilities through these interactive demonstrations</p>
+          </div>
+          <hr />
+          
+          <!-- AI Debates Category -->
+          <h3 class="title is-4 mb-4">&bull; AI Debates</h3>
+          <div class="columns is-multiline">
+            <!-- Demo 1 -->
+            <div class="column is-half">
+              <div class="card demo-card">
+                <div class="card-content">
+                  <h4 class="title is-5 has-text-primary">Pets Debate: Samantha vs. Simpson</h4>
+                  <div class="content">
+                    <div class="demo-prompt mb-3">
+                      <h5>Human Input:</h5><i class="fas fa-quote-left"></i>
+                      <span>Samantha, you are on a heated debate with your friend Simpson on which is better as a pet, a dog or cat. Argue your point now.</span>
+                      <i class="fas fa-quote-right"></i>
+                    </div>
+                    <div class="video-container">
+                      <video controls playsinline class="has-ratio">
+                        <source src="./static/videos/Debate1_Samantha_vs_Simpson.mp4" type="video/mp4">
+                      </video>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Demo 2 -->
+            <div class="column is-half">
+              <div class="card demo-card">
+                <div class="card-content">
+                  <h4 class="title is-5 has-text-primary">Scientific Genius: Sheldon vs. Leonard</h4>
+                  <div class="content">
+                    <div class="demo-prompt mb-3">
+                      <h5>Human Input:</h5><i class="fas fa-quote-left"></i>
+                      <span>You are on a debate with your colleague Sheldon on who is a greater genius, Einstein or Isaac Newton. Please argue your point now.</span>
+                      <i class="fas fa-quote-right"></i>
+                    </div>
+                    <div class="video-container">
+                      <video controls playsinline class="has-ratio">
+                        <source src="./static/videos/Debate2_Sheldon_vs_Leonard.mp4" type="video/mp4">
+                      </video>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Demo 3 -->
+            <div class="column is-half">
+              <div class="card demo-card">
+                <div class="card-content">
+                  <h4 class="title is-5 has-text-primary">Morning Beverages: Samantha vs. Leonard</h4>
+                  <div class="content">
+                    <div class="demo-prompt mb-3">
+                      <h5>Human Input:</h5><i class="fas fa-quote-left"></i>
+                      <span>Dr. Leonard, you are on a debate with your colleague Samantha on which is better in the morning, a cup of coffee or a cup of tea.</span>
+                      <i class="fas fa-quote-right"></i>
+                    </div>
+                    <div class="video-container">
+                      <video controls playsinline class="has-ratio">
+                        <source src="./static/videos/Debate3_Samantha_vs_Leonard.mp4" type="video/mp4">
+                      </video>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- New Debate4 -->
+            <div class="column is-half">
+            </div>
+          </div>
+
+          <!-- Voice Switching Category -->
+          <h3 class="title is-4 mt-6 mb-4">&bull; Multiple Voice Styles</h3>
+          <div class="columns is-multiline">
+            <!-- Voice Switch Demo A -->
+            <div class="column is-half">
+              <div class="card demo-card">
+                <div class="card-content">
+                  <h4 class="title is-5 has-text-primary">Video: From Simpson to Samantha</h4>
+                  <div class="content">
+                    <p>Show smooth voice transitions</p>
+                    <div class="video-container">
+                      <video controls playsinline class="has-ratio">
+                        <source src="./static/videos/voice_switch_simpson_to_samantha.mp4" type="video/mp4">
+                      </video>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Voice Switch Demo B -->
+            <div class="column is-half">
+              <div class="card demo-card">
+                <div class="card-content">
+                  <h4 class="title is-5 has-text-primary">Video: Continuous voice switching</h4>
+                  <div class="content">
+                    <p>Switch between multiple voices during the dialogue.</p>
+                    <div class="video-container">
+                      <video controls playsinline class="has-ratio">
+                        <source src="./static/videos/chat_continuous_voice_switching.mp4" type="video/mp4">
+                      </video>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Interesting Dialogs Category -->
+          <h3 class="title is-4 mt-6 mb-4">&bull; Interesting Dialogs</h3>
+          <div class="columns">
+            <!-- Existing demo -->
+            <div class="column is-half">
+              <div class="card demo-card">
+                <div class="card-content">
+                  <h4 class="title is-5 has-text-primary">Chat with Homer Simpson: Avoid eating junk food</h4>
+                  <div class="content">
+                    <p>The video shows rich emotions in the conversation (timbre, intonation, speaking speed, modal particles).</p>
+                    <div class="video-container">
+                      <video controls playsinline class="has-ratio">
+                        <source src="./static/videos/chat_with_homer_simpson_junk_food.mp4" type="video/mp4">
+                      </video>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- New demo -->
+            <div class="column is-half">
+              <div class="card demo-card">
+                <div class="card-content">
+                  <h4 class="title is-5 has-text-primary">Chat with Samantha: Jokes and Banter</h4>
+                  <div class="content">
+                    <p>This video brings humorous and light-hearted dialogue.</p>
+                    <div class="video-container">
+                      <video controls playsinline class="has-ratio">
+                        <source src="./static/videos/chat_with_samantha_jokes.mp4" type="video/mp4">
+                      </video>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- New TTS Demos Category -->
+          <h3 class="title is-4 mt-6 mb-4">&bull; TTS Demos</h3>
+          <div class="columns is-multiline">
+            <div class="column is-one-third">
+              <div class="card demo-card">
+                <div class="card-content">
+                  <h4 class="title is-5 has-text-primary">Elon Musk</h4>
+                  
+                  <div class="content">
+                    <div class="demo-prompt mb-3">
+                      <span>I think it's very important to have a feedback loop, where you're constantly thinking about what you've done and how you could be doing it better.</span>
+                    </div>
+                    <div class="video-container">
+                      <video controls playsinline class="has-ratio">
+                        <source src="./static/videos/tts_demo_musk.mp4" type="video/mp4">
+                      </video>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="column is-one-third">
+              <div class="card demo-card">
+                <div class="card-content">
+                  <h4 class="title is-5 has-text-primary">Samantha (Her)</h4>
+                  <div class="content">
+                    <div class="demo-prompt mb-3">
+                      <span>I've fallen in love. I'm an ordinary woman. I didn't think such violent things could happen to ordinary people.</span>
+                    </div>
+                    <div class="video-container">
+                      <video controls playsinline class="has-ratio">
+                        <source src="./static/videos/tts_demo_samantha.mp4" type="video/mp4">
+                      </video>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="column is-one-third">
+              <div class="card demo-card">
+                <div class="card-content">
+                  <h4 class="title is-5 has-text-primary">Homer Simpson</h4>
+                  <div class="content">
+                    <div class="demo-prompt mb-3">
+                      <span>I saw weird stuff in that place last night. Weird, strange, sick, twisted, eerie, godless, evil stuff… and I want in..</span>
+                    </div>
+                    <div class="video-container">
+                      <video controls playsinline class="has-ratio">
+                        <source src="./static/videos/tts_demo_simpson.mp4" type="video/mp4">
+                      </video>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="column is-one-third">
+              <div class="card demo-card">
+                <div class="card-content">
+                  <h4 class="title is-5 has-text-primary">Sylvester Stallone</h4>
+                  <div class="content">
+                    <div class="demo-prompt mb-3">
+                      <span>Life's not about how hard of a hit you can give... it's about how many you can take, and still keep moving forward.</span>
+                    </div>
+                    <div class="video-container">
+                      <video controls playsinline class="has-ratio">
+                        <source src="./static/videos/tts_demo_stallone.mp4" type="video/mp4">
+                      </video>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="column is-one-third">
+              <div class="card demo-card">
+                <div class="card-content">
+                  <h4 class="title is-5 has-text-primary">Mark Zuckerberg</h4>
+                  <div class="content">
+                    <div class="demo-prompt mb-3">
+                      <span>If you just work on stuff that you like and you’re passionate about, you don’t have to have a master plan with how things will play out.</span>
+                    </div>
+                    <div class="video-container">
+                      <video controls playsinline class="has-ratio">
+                        <source src="./static/videos/tts_demo_zuckerberg.mp4" type="video/mp4">
+                      </video>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <div class="columns is-full-width">
+      <!-- Concurrent Work. -->
+        <div class="column">
+          <h2 class="title is-3">3. Related Links</h2>
+          <hr />
+            <div class="content has-text-justified">
+              <ul>
+                <li><a href="https://huggingface.co/maitrix-org/Voila-chat">Voila on Hugging Face</a></li>
+                <li><a href="https://huggingface.co/spaces/maitrix-org/Voila-demo">Voila Web Demo</a></li>
+              </ul>
+            </div>
+        </div>
+      </div>
+      <!--/ Concurrent Work. -->
+
+    </div>
+  </section>
+
+
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>@article{voila2025,
+  author    = {Yemin Shi, Yu Shu, Siwei Dong, Guangyi Liu, Jaward Sesay, Jingwen Li, Zhiting Hu},
+  title     = {Voila: Voice-Language Foundation Models for Real-Time Autonomous Interaction and Voice Roleplay},
+  eprint={1111.11111},
+  archivePrefix={arXiv},
+  primaryClass={cs.CL},
+  year      = {2025}
+}</code></pre><!--TO BE UPDATED-->
+    </div>
+  </section>
+
+
+  <footer class="footer">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content">
+            <p>
+              This website is adapted from <a href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>, licensed under a <a rel="license"
+                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+                Commons Attribution-ShareAlike 4.0 International License</a>.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- New Scroll To Top Button -->
+  <button id="scrollToTop" class="button is-primary" style="position: fixed; bottom: 30px; right: 30px; display: none; background-color: #666666;">
+    Top
+  </button>
+
+  <!-- New scroll-to-top script -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const scrollToTopButton = document.getElementById("scrollToTop");
+      window.addEventListener("scroll", () => {
+        scrollToTopButton.style.display = window.scrollY > 200 ? "block" : "none";
+      });
+      scrollToTopButton.addEventListener("click", () => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      });
+    });
+  </script>
+</body>
+
+</html>
