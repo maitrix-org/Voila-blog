@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="description"
-    content="Voice-Language Foundation Models for Real-Time Conversation and Autonomous Interaction">
+    content="Voila: Voice-Language Foundation Models for Real-Time Autonomous Interaction and Voice Role-Play">
   <meta name="keywords" content="Voila"><!--TO BE UPDATED-->
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Voila</title><!--TO BE UPDATED-->
@@ -29,7 +29,7 @@
         <div class="columns is-centered">
           <div class="column has-text-centered">
             <img class="logo-image" src="static/images/logo.png" />
-            <h1 class="title is-1 publication-title">Voice-Language Foundation Models for Real-Time Autonomous Interaction and Speech Roleplay</h1>
+            <h1 class="title is-1 publication-title">Voice-Language Foundation Models for Real-Time Autonomous Interaction and Voice Role-Play</h1>
             <div class="is-size-5 publication-authors">
               <span class="author-block">
                 Yemin Shi<sup>*</sup>,</span>
@@ -48,7 +48,7 @@
                 Jingwen Li<sup></sup>,
               </span>
               <span class="author-block">
-                Zhiting Hu<sup>*</sup>
+                Zhiting Hu<sup></sup>
               </span>
             </div>
 
@@ -104,9 +104,7 @@
           <h2 class="title is-3">Abstract</h2>
           <div class="content has-text-justified">
             <p>
-              The evolution of voice AI systems has confronted numerous challenges, with traditional pipeline architectures embodying notable constraints such as high latency, the erosion of vocal nuances, and mechanical, reactive interactions. While these structures sufficiently accommodate basic voice-driven interfaces, the objective of achieving truly autonomous interactions akin to natural human communication has remained largely unmet. Voila, a pioneering family of large audio-language foundation models, is introduced to transcend these limitations. By leveraging an innovative end-to-end model design, Voila targets the dual objectives of facilitating real-time, autonomous, and flexible voice interactions while preserving rich vocal details. Voila's novel hierarchical Transformer architecture integrates streaming audio encoding with multitier audio generators, achieving a high-fidelity audio processing experience that minimizes latency to 195 ms—surpassing the average human response time. Additionally, Voila intelligently melds the voice and language modeling capabilities inherent in LLMs, empowering users with customizable voice and persona-driven interactions. This framework not only retains linguistic proficiency and vast knowledge but also incorporates millions of pre-built and customizable voices to enhance user engagement.
-            </p>
-            <p>Moreover, Voila is established as a unified model adept in various audio tasks beyond spoken dialogue, including Automatic Speech Recognition (ASR), Text-to-Speech (TTS), and adaptations such as speech translation. Capable of supporting six languages and enriched by extensive multilingual training data, Voila embodies a significant step forward in transforming machine interactions from passive exchanges into seamless, proactive dialogues. The deployment of Voila's web demo promises broad user accessibility and invites further exploration into redefining the dynamics of human-AI communication.
+           A voice AI agent that blends seamlessly into daily life would interact with humans in an autonomous, real-time, and emotionally expressive manner. Rather than merely reacting to commands, it would continuously listen, reason, and respond proactively, fostering fluid, dynamic, and emotionally resonant interactions. We introduce Voila, a family of large voice-language foundation models that make a step towards this vision. Voila moves beyond traditional pipeline systems by adopting a new end-to-end architecture that enables full-duplex, low-latency conversations while preserving rich vocal nuances such as tone, rhythm, and emotion. It achieves a response latency of just 195 milliseconds, surpassing the average human response time. Its hierarchical multi-scale Transformer integrates the reasoning capabilities of large language models (LLMs) with powerful acoustic modeling, enabling natural, persona-aware voice generation---where users can simply write text instructions to define the speaker’s identity, tone, and other characteristics. Moreover, Voila supports over one million pre-built voices and efficient customization of new ones from brief audio samples as short as 10 seconds. Beyond spoken dialogue, Voila is designed as a unified model for a wide range of voice-based applications, including automatic speech recognition (ASR), Text-to-Speech (TTS), and, with minimal adaptation, multilingual speech translation. Voila is fully open-sourced to support open research and accelerate progress toward next-generation human-machine interactions. 
             </p>
           </div>
         </div>
@@ -138,15 +136,16 @@
         <!-- Highlights -->
         <div class="column">
           <div class="content">
-            <h2 class="title is-3">1. Highlights</h2>
+            <h2 class="title is-3">Highlights</h2>
             <hr />
+            <p><b>Voila models and code are fully open-sourced at <a href="https://huggingface.co/collections/maitrix-org/voila-67e0d96962c19f221fc73fa5">Hugging Face</a>. Also, try out Voila <a href="https://huggingface.co/spaces/maitrix-org/Voila-demo">web demo</a>!</b></p>
+            <br/>
             <p>
-              Voila designs a hierarchical Transformer architecture, including streaming audio encoding and tokenization, and multi-scale Transformers consisting of an LLM backbone and a hierarchical audio generator. The models are trained in an end-to-end way with extensive audio-text data. The key advancements are:
+              Voila designs a hierarchical Transformer architecture, including streaming audio encoding and tokenization, and multi-scale Transformers consisting of an LLM backbone and a hierarchical audio generator. The models are trained in an end-to-end way with extensive audio-text data.
             </p>
             <div id="highlights-image" class="has-text-centered">
               <img src="static/images/highlights.png" alt="Voila Highlights" width="80%" />
             </div>
-            <p>We release the model in <a href="https://huggingface.co/maitrix-org/Voila-chat">Hugging face</a> and encourage the readers to try our <a href="https://huggingface.co/spaces/maitrix-org/Voila-demo">web demo</a>.</p>
           </div>
         </div>
         <!--/ Highlights -->
@@ -158,7 +157,7 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column">
-          <h2 class="title is-3">2. Demos</h2>
+          <h2 class="title is-3">Demo Examples</h2>
           <div class="content has-text-centered">
             <p class="subtitle">Experience Voila's capabilities through these interactive demonstrations</p>
           </div>
@@ -273,7 +272,7 @@
           </div>
 
           <!-- Interesting Dialogs Category -->
-          <h3 class="title is-4 mt-6 mb-4">&bull; Interesting Dialogs</h3>
+          <h3 class="title is-4 mt-6 mb-4">&bull; Fun Conversations</h3>
           <div class="columns">
             <!-- Existing demo -->
             <div class="column is-half">
@@ -310,7 +309,7 @@
           </div>
 
           <!-- New TTS Demos Category -->
-          <h3 class="title is-4 mt-6 mb-4">&bull; TTS Demos</h3>
+          <h3 class="title is-4 mt-6 mb-4">&bull; Text-to-Speech (TTS)</h3>
           <div class="columns is-multiline">
             <div class="column is-one-third">
               <div class="card demo-card">
@@ -409,7 +408,7 @@
       <div class="columns is-full-width">
       <!-- Concurrent Work. -->
         <div class="column">
-          <h2 class="title is-3">3. Related Links</h2>
+          <h2 class="title is-3">Related Links</h2>
           <hr />
             <div class="content has-text-justified">
               <ul>
@@ -430,7 +429,7 @@
       <h2 class="title">BibTeX</h2>
       <pre><code>@article{voila2025,
   author    = {Yemin Shi, Yu Shu, Siwei Dong, Guangyi Liu, Jaward Sesay, Jingwen Li, Zhiting Hu},
-  title     = {Voila: Voice-Language Foundation Models for Real-Time Autonomous Interaction and Voice Roleplay},
+  title     = {Voila: Voice-Language Foundation Models for Real-Time Autonomous Interaction and Voice Role-Play},
   eprint={1111.11111},
   archivePrefix={arXiv},
   primaryClass={cs.CL},
